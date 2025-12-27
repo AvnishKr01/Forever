@@ -32,7 +32,8 @@ app.use('/api/order', orderRouter)
 
 // In server File Connection Of MongoDB
 mongoConnection().then(() => {
-  app.listen(PORT, () => {
+  app.listen(PORT, "0.0.0.0" , () => {
     console.log(`Server start ${PORT}`)
   })
 })
+
