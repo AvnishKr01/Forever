@@ -21,6 +21,7 @@ app.use(cors())
 // Server Page Testing
 app.get('/', (req, res) => {
   console.log('Server page working')
+  res.status(200).send('Server is running')
 })
 
 // API End Point
@@ -36,4 +37,5 @@ mongoConnection().then(() => {
     console.log(`Server start ${PORT}`)
   })
 })
+
 
