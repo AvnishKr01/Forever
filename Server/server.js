@@ -20,7 +20,7 @@ app.use(cors())
 
 
 // Server Page Testing
-app.get('/', (req, res) => {
+app.get('/:id', (req, res) => {
   console.log('Server page working')
   res.status(200).send('Server is running')
 })
@@ -38,6 +38,7 @@ mongoConnection().then(() => {
     console.log(`Server start ${PORT}`)
   })
 })
+
 
 
 
